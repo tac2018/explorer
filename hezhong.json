@@ -1,0 +1,145 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "合众币",
+
+  "address": "127.0.0.1:3001",
+
+  // coin name
+  "coin": "HeZhongCoin",
+
+  // coin symbol
+  "symbol": "HZC",
+
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+
+  // Uses bootswatch themes (http://bootswatch.com/)
+  // Valid options:
+  //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
+  //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
+  // theme (see /public/themes for available themes)
+  "theme": "Lumen",
+
+  // port to listen for requests on.
+  "port" : 3001,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "iquidus",
+    "password": "3xp!0reR",
+    "database": "hezhongcoindb",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "localhost",
+    "port": 31010,
+    "user": "hezhongcoinrpc",
+    "pass": "HMdkLhKSp9dYcmQdbCVembz1FAQPDFB5x9qmGoDDtrV3"
+  },
+
+  // confirmations
+  "confirmations": 6,
+
+  // language settings
+  "locale": "locale/cn.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": false,
+    "richlist": true,
+    "twitter": false,
+    "search": true
+  },
+
+  // index page (valid options for difficulty are POW or POS)
+  "index": {
+    "show_hashrate": true,
+    "difficulty": "POW",
+    "last_txs": 10
+  },
+
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 10,
+    "blockhash": "d56b03c45330bd4c786276198124c6f9c65864d25de823d2bf7447e833da9797",
+    "txhash": "5d0da9bcebe5d9d2d19cfa76b8e96259117a59d2bdcbac937d76c1c3e43bd357",
+    "address": "ejAC9jvKErgwDXrPepAc7CtdZhsvz9pjpk"
+  },
+
+  // market settings
+  //supported markets: bittrex, poloniex, yobit, empoex, cryptsy, bleutrade
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "JBS",
+    "exchange": "BTC",
+    "enabled": ["bittrex", "cryptsy"],
+    "cryptsy_id": "290",
+    "default": "bittrex"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": true,
+    "balance": true
+  },
+
+  // twitter
+  "twitter": "iquidus",
+
+  //genesis
+  "genesis_tx": "a3daa9d7cad9af466ebd3cbbaa8ee0a899f6d33ed964989eec76bcb5655f9704",
+  "genesis_block": "95475750ea9eca202b04fef5e31d4307a9090dd4eaf434a927999410575506f5",
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": false,
+
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  "supply": "BALANCES",
+
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "getnetworkhashps",
+
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "K",
+
+  // Address labels
+  // example : "JhbrvAmM7kNpwA6wD5KoAsbtikLWWMNPcM": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information
+  "labels": {
+  //  "JSoEdU717hvz8KQVq2HfcqV9A79Wihzusu": {"label": "Developers address", "type":"primary", "url":"http://example.com"},
+  //  "JSWVXHWeYNknPdG9uDrcBoZHztKMFCsndw": {"label": "Cryptsy"}
+  }
+}
+

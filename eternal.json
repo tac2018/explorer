@@ -1,0 +1,145 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "永恒币",
+
+  "address": "127.0.0.1:3001",
+
+  // coin name
+  "coin": "Eternal-Currency",
+
+  // coin symbol
+  "symbol": "EC",
+
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+
+  // Uses bootswatch themes (http://bootswatch.com/)
+  // Valid options:
+  //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
+  //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
+  // theme (see /public/themes for available themes)
+  "theme": "Lumen",
+
+  // port to listen for requests on.
+  "port" : 3001,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "iquidus",
+    "password": "3xp!0reR",
+    "database": "eternalcurrencydb",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "localhost",
+    "port": 41010,
+    "user": "eternalcurrencyrpc",
+    "pass": "2zfBjXMcuq4JtJYYkf2cwmR6wcni7CFWJwKof8E5Dg8s"
+  },
+
+  // confirmations
+  "confirmations": 6,
+
+  // language settings
+  "locale": "locale/cn.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": true,
+    "richlist": true,
+    "twitter": true,
+    "search": true
+  },
+
+  // index page (valid options for difficulty are POW or POS)
+  "index": {
+    "show_hashrate": true,
+    "difficulty": "POW",
+    "last_txs": 100
+  },
+
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 40000,
+    "blockhash": "00007cfefcd88180def54e1651fba2e15bc3d401533b5580a94569e8f0df8977",
+    "txhash": "87cec2420dc1ad90df9f778e1d1cbf005798a3cf0a291d8aa1fe5a49dfb11b21",
+    "address": "ebq23tLFWu5wroDUqMhQD7hSWKj6hbotyG"
+  },
+
+  // market settings
+  //supported markets: bittrex, poloniex, yobit, empoex, cryptsy, bleutrade
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "JBS",
+    "exchange": "BTC",
+    "enabled": ["bittrex", "cryptsy"],
+    "cryptsy_id": "290",
+    "default": "bittrex"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": true,
+    "balance": true
+  },
+
+  // twitter
+  "twitter": "iquidus",
+
+  //genesis
+  "genesis_tx": "fd81d4e046199d0891aa5b8ed31b1090cba00de43370f3c380ff95d90d2a5cbf",
+  "genesis_block": "bb04501c3352ba5a54cb4b5ddf65a17853f2e960aa3abb16fe5d7fc3794cdde1",
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": false,
+
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  "supply": "BALANCES",
+
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "getnetworkhashps",
+
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "K",
+
+  // Address labels
+  // example : "JhbrvAmM7kNpwA6wD5KoAsbtikLWWMNPcM": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information
+  "labels": {
+  //  "JSoEdU717hvz8KQVq2HfcqV9A79Wihzusu": {"label": "Developers address", "type":"primary", "url":"http://example.com"},
+  //  "JSWVXHWeYNknPdG9uDrcBoZHztKMFCsndw": {"label": "Cryptsy"}
+  }
+}
+

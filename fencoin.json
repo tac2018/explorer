@@ -1,0 +1,145 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "分币",
+
+  "address": "127.0.0.1:80",
+
+  // coin name
+  "coin": "fencoin",
+
+  // coin symbol
+  "symbol": "FNC",
+
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+
+  // Uses bootswatch themes (http://bootswatch.com/)
+  // Valid options:
+  //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
+  //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
+  // theme (see /public/themes for available themes)
+  "theme": "Darkly",
+
+  // port to listen for requests on.
+  "port" : 80,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "iquidus",
+    "password": "3xp!0reR",
+    "database": "fencoindb",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "localhost",
+    "port": 20729,
+    "user": "bitcoinrpc",
+    "pass": "FaaWmTLks8sWw7N8DsCt8pKjJMQMSoK96LoUE4SWKC7y"
+  },
+
+  // confirmations
+  "confirmations": 6,
+
+  // language settings
+  "locale": "locale/cn.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": false,
+    "richlist": true,
+    "twitter": false,
+    "search": true
+  },
+
+  // index page (valid options for difficulty are POW or POS)
+  "index": {
+    "show_hashrate": true,
+    "difficulty": "POW",
+    "last_txs": 100
+  },
+
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 100,
+    "blockhash": "00004e65db2a6b19f371445412dddc4b7ae56af854d2e834e14818b11ad9dc1a",
+    "txhash": "7ea5e61e27b4c23684349a6c9a6fe0599656dc926ff3aabd26ac6433bd2b3e8a",
+    "address": "6yLMkKGbhhYkSk1h6YUvZtz3bCQpZcrENB"
+  },
+
+  // market settings
+  //supported markets: bittrex, poloniex, yobit, empoex, cryptsy, bleutrade
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "JBS",
+    "exchange": "BTC",
+    "enabled": ["bittrex", "cryptsy"],
+    "cryptsy_id": "290",
+    "default": "bittrex"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": false,
+    "balance": true
+  },
+
+  // twitter
+  "twitter": "iquidus",
+
+  //genesis
+  "genesis_tx": "1215175243de75dbae2609a8e906b119c4302fadc530bd86c2c7d80c8efb2568",
+  "genesis_block": "000199fcb1dac359c67fcc3f3ea32b34a54bf2ee13fe550f8c028e334ddf8e3e",
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": false,
+
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  "supply": "BALANCES",
+
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "networkhashps",
+
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "K",
+
+  // Address labels
+  // example : "JhbrvAmM7kNpwA6wD5KoAsbtikLWWMNPcM": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information
+  "labels": {
+  //  "JSoEdU717hvz8KQVq2HfcqV9A79Wihzusu": {"label": "Developers address", "type":"primary", "url":"http://example.com"},
+  //  "JSWVXHWeYNknPdG9uDrcBoZHztKMFCsndw": {"label": "Cryptsy"}
+  }
+}
+

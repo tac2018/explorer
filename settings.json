@@ -1,0 +1,145 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "光伏链",
+  
+  "address": "127.0.0.1:80",
+  
+  // coin name
+  "coin": "TAChain",
+
+  // coin symbol
+  "symbol": "TAC",
+  
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+  
+  // Uses bootswatch themes (http://bootswatch.com/)
+  // Valid options: 
+  //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper, 
+  //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
+  // theme (see /public/themes for available themes)
+  "theme": "Darkly",
+
+  // port to listen for requests on.
+  "port" : 80,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "user",
+    "password": "123456",
+    "database": "tac2000",
+    "address": "127.0.0.1",
+    "port": 27017
+  },
+  
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "127.0.0.1",
+    "port": 29600,
+    "user": "user",
+    "pass": "123456"
+  },
+  
+  // confirmations
+  "confirmations": 40,
+
+  // language settings
+  "locale": "locale/cn.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "network": true,
+    "markets": false,
+    "richlist": false,
+    "twitter": false,
+    "search": true
+  },
+
+  // index page (valid options for difficulty are POW or POS)
+  "index": {
+    "show_hashrate": true,
+    "difficulty": "POW",
+    "last_txs": 100
+  },
+  
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 1337,
+    "blockhash": "f8af80ae8a591808d974b094824e9138adb15ddc7d64e5461bb2941c90acbe57",
+    "txhash": "fce21271798717625540928597ff530e6f23d798a128e3f600e8b68d07272a55",
+    "address": "QqYfaRrLm6BoBU6of6Efu7n7NzhSezTUWV"
+  },
+  
+  // market settings
+  //supported markets: bittrex, poloniex, yobit, empoex, cryptsy, bleutrade
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "JBS",
+    "exchange": "BTC",
+    "enabled": ["bittrex", "cryptsy"],
+    "cryptsy_id": "290",
+    "default": "bittrex"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": true,
+    "balance": true
+  },
+
+  // twitter
+  "twitter": "iquidus",
+
+  //genesis
+  "genesis_tx": "bc7cd03740c92de3fa94b0e009b4736403e75ccd6668ee3e69f96c8f88b22a00",
+  "genesis_block": "0000004a6a7147681ccf5d4981e8345ce351a2cd3d9fc8cb194f9526b8245a18",  
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": true,
+  
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  "supply": "GETINFO",
+
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "netmhashps",
+  
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "K",
+
+  // Address labels
+  // example : "JhbrvAmM7kNpwA6wD5KoAsbtikLWWMNPcM": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"} 
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information 
+  "labels": {
+  //  "JSoEdU717hvz8KQVq2HfcqV9A79Wihzusu": {"label": "Developers address", "type":"primary", "url":"http://example.com"},
+  //  "JSWVXHWeYNknPdG9uDrcBoZHztKMFCsndw": {"label": "Cryptsy"}
+  }
+}
